@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wok</title>
+    <meta name="description" content="Play chess against a simple AI opponent">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♟️</text></svg>">
+
+    <!-- Chessboard.js CSS -->
+    <link rel="stylesheet" href="./chessboardjs-1.0.0/css/chessboard-1.0.0.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery + Chessboard.js -->
+    <script src="./jquery-1.12.4.min.js"></script>
+    <script src="./chessboardjs-1.0.0/js/chessboard-1.0.0.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>♟️ Wok</h1>
+
+        <div class="game-container">
+            <div id="inputBlocker"></div>
+            <div id="myBoard"></div>
+        </div>
+
+        <div id="gameOverPopup">
+            <div id="gameOverContent">
+                <p id="gameOverMessage">Game Over</p>
+                <button id="tryAgainBtn">Play Again</button>
+            </div>
+        </div>
+
+        <div id="aboutEngine">
+            <h2>About This Engine</h2>
+            <p>
+                This engine runs entirely in your browser via WebAssembly for privacy and portability.
+                As a result, it may run slower and play weaker than the native app
+            </p>
+        </div>
+        <div id="githubLink">
+            <a href="https://github.com/sleong05/Wok" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/github.svg" alt="GitHub" />
+                View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Load engine + main script -->
+    <script src="engine.js"></script>
+    <script type="module" src="scripts.js"></script>
+</body>
+
+</html>
